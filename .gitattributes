@@ -1,2 +1,19 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+var bimSurfer = new BimSurfer({
+    domNode: "viewerContainer"
+});
+Loading a model from BIMServer:
+
+bimSurfer.load({
+        bimserver: ADDRESS,
+        username: USERNAME,
+        password: PASSWORD,
+        poid: 131073,
+        roid: 65539,
+        schema: "ifc2x3tc1" // < TODO: Deduce automatically
+    })
+        .then(function (model) {
+        
+                // Model is now loaded and rendering.
+                // The following sections show what you can do with BIMSurfer at this point.
+                //...
+            });
